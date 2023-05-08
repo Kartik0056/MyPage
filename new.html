@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="new.css">
+	<title>Inline Css</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.icon{
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.icon ul{
+			display: flex;
+			list-style: none;
+		}
+		.icon ul li{
+			width: 200px;
+			height: 200px;
+			margin-right: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+/*            margin-left:550px;*/
+			border: 2px solid black;
+			border-radius: 50%;
+			position: relative;
+			
+			
+
+		}
+		.icon ul li i{
+			color: cyan;
+			z-index: 1;
+		}
+		.icon ul li:before{
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			transition: 0.5s all;
+		}
+		.icon ul li:hover::before{
+			background: cyan;
+			transform: scale(0.9);
+			width: inherit;
+			height: inherit;
+		}
+		
+		.icon li:hover > i{
+            
+			color: white;
+			
+		}
+		
+
+	</style>
+
+</head>
+<body>
+<section class="main">
+	<div class="icon">
+		<ul>
+			<li><i class="fa fa-3x fa-home"></i></li>
+			<li><i class="fa fa-3x fa-phone"></i></li>
+			<li><i class="fa fa-3x fa-user"></i></li>
+			<li><i class="fa fa-3x fa-envelope-open"></i></li>
+
+            </ul>
+			</div>
+		
+</section>
+
+</body>
+</html>
